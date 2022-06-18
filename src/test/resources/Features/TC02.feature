@@ -2,24 +2,17 @@
 
 Funcionalidade: Alterar Dados do Usuário
 
-  Eu, como usuário, gostaria de alterar os dados dá minha conta.
+  Eu, como usuário, gostaria de alterar os dados da minha conta.
 
   Contexto:
-    Dado que o usuário está na página myStore
+    Dado que o usuário acessa o sistema com "lucastesting01@test.com" e "123456789"
 
-  Cenário: Alterar dados do usuário com sucesso.
-    Quando o usuário navega para a página My account em seguida My Personal Information
-    E altera os dados dos campos: Last name e Email
-      | valor            |
+  @alterarDadosUser
+  Cenário: Alterar dados do usuário
+    Quando o usuário navega para a página My Personal Information
+    E altera os dados dos campos: First name e Last name
+      | value            |
       | Testing Name     |
       | Testing LastName |
-      | Pass!@#          |
-      | 24               |
-      | 3                |
-      | 1991             |
-      | Full Address     |
-      | Green Bay        |
-      | Wisconsin        |
-      | 54229            |
-      | +1-920-555-0165  |
-    Então as alterações devem ser salvas com sucesso.
+      | 123456789        |
+    Então as alterações devem ser salvas com sucesso

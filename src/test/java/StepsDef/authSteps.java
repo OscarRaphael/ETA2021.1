@@ -1,20 +1,19 @@
 package StepsDef;
 
 import Pages.authPage;
-import io.cucumber.java.pt.Quando;
+import Pages.storePage;
+import io.cucumber.java.pt.Dado;
 
 public class authSteps {
     authPage AuthPage = new authPage();
+    storePage StorePage = new storePage();
 
-    @Quando("insere um email valido {string} ao criar uma conta")
-    public void insereUmEmailValidoAoCriarUmaConta(String text) {
-        AuthPage.assertAuthentication();
-        AuthPage.inputEmail(text);
-        AuthPage.clickCreateAccount();
+    @Dado("que o usuário acessa o sistema com {string} e {string}")
+    public void queOUsuárioAcessaOSistemaComE(String email, String passwd) {
+        StorePage.assertLogo();
+        StorePage.clickLogIn();
+        AuthPage.inputEmail(email);
+        AuthPage.inputPasswd(passwd);
+        AuthPage.clickSubmitLogin();
     }
-
-
 }
-
-
-
