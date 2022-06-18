@@ -3,6 +3,7 @@ package StepsDef;
 import Pages.authPage;
 import Pages.storePage;
 import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.Quando;
 
 public class authSteps {
     authPage AuthPage = new authPage();
@@ -15,5 +16,12 @@ public class authSteps {
         AuthPage.inputEmail(email);
         AuthPage.inputPasswd(passwd);
         AuthPage.clickSubmitLogin();
+    }
+
+    @Quando("insere um email valido ao criar uma conta")
+    public void insereUmEmailValidoAoCriarUmaConta() {
+        AuthPage.inputCreateRandomEmail();
+        AuthPage.clickCreate();
+
     }
 }
