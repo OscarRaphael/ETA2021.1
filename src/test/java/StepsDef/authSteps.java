@@ -20,8 +20,8 @@ public class authSteps {
 
     @Quando("insere um email valido ao criar uma conta")
     public void insereUmEmailValidoAoCriarUmaConta() {
+        AuthPage.assertPage();
         AuthPage.inputCreateRandomEmail();
         AuthPage.clickCreate();
-
     }
 }

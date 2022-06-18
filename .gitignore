@@ -75,3 +75,4 @@ fabric.properties
 # Trash
 src/test/resources/org/
 target/
+src/test/java/Runner
