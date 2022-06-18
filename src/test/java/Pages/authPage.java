@@ -17,7 +17,7 @@ public class authPage extends basePage {
     @FindBy(how = How.ID, using = "email")
     private WebElement email_input;
 
-    @FindBy(how = How.ID, using = "create_email")
+    @FindBy(how = How.ID, using = "email_create")
     private WebElement createEmail_input;
 
     @FindBy(how = How.ID, using = "passwd")
@@ -45,6 +45,10 @@ public class authPage extends basePage {
         passwd_input.click();
         passwd_input.sendKeys(text);
         passwd_input.sendKeys(Keys.TAB);
+    }
+
+    public void assertPage() {
+        authentication_text.isDisplayed();
     }
 
     public void clickSubmitLogin() {
