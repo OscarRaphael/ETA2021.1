@@ -6,6 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class authPage extends basePage {
+    @FindBy(how = How.CLASS_NAME, using = "page-heading")
+    private WebElement authentication_text;
+  
     @FindBy(how = How.ID, using = "email")
     private WebElement email_input;
 
@@ -24,7 +27,6 @@ public class authPage extends basePage {
     public void inputPasswd(String text) {
         passwd_input.click();
         passwd_input.sendKeys(text);
-        String passwd = passwd_input.getText();
         passwd_input.sendKeys(Keys.TAB);
     }
 

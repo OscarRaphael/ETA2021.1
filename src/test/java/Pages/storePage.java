@@ -11,6 +11,9 @@ public class storePage extends basePage {
     @FindBy(how = How.CLASS_NAME, using = "login")
     private WebElement login_btn;
 
+    @FindBy(how = How.ID, using = "contact-link")
+    private WebElement contact_us_btn;
+
     public void assertLogo() {
         logo.isDisplayed();
     }
@@ -18,4 +21,8 @@ public class storePage extends basePage {
     public void clickLogIn() {
         login_btn.click();
     }
+
+    public void clickContactUs() {contact_us_btn.click();}
+
+
 }

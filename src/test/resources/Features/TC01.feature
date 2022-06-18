@@ -10,6 +10,7 @@ Funcionalidade: Cadastrar Usuário
   @cadastrarUser
   Cenário: Cadastrar Usuário com sucesso
     Quando o usuário navega para a página de autenticação
+    E insere um email valido "tester01@testes1.com" ao criar uma conta
     E adiciona credenciais válidas para cadastrar um usuário
       | valor            |
       | Testing Name     |
