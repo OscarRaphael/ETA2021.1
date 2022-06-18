@@ -11,11 +11,18 @@ public class storePage extends basePage {
     @FindBy(how = How.CLASS_NAME, using = "login")
     private WebElement login_btn;
 
+    @FindBy(how = How.XPATH, using = "//*[@title=\"Contact Us\"]")
+    private WebElement contactUs_btn;
+
     public void assertLogo() {
         logo.isDisplayed();
     }
 
     public void clickLogIn() {
         login_btn.click();
+    }
+
+    public void clickContactUs() {
+        contactUs_btn.click();
     }
 }

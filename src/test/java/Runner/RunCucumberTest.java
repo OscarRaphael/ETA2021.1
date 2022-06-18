@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
         glue = {"StepsDef"},
         plugin = {"pretty", "html:target/cucumber-reports/Cucumber.html"},
         dryRun = false,
-        tags = "@cadastrarUser",
-        snippets = CucumberOptions.SnippetType.CAMELCASE
+        tags = "@contatenos",
+        snippets= CucumberOptions.SnippetType.CAMELCASE
 )
 public class RunCucumberTest {
 }

@@ -17,4 +17,8 @@ public class storeSteps {
         StorePage.clickLogIn();
     }
 
+    @Quando("o usuário acessa o contate-nos")
+    public void oUsuárioAcessaOContateNos() throws Throwable {
+        StorePage.clickContactUs();
+    }
 }
