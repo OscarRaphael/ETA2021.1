@@ -1,25 +1,15 @@
 #language:pt
 
-Funcionalidade: Cancelar uma Compra
+Funcionalidade: Calcular valor total da compra
 
-  Eu, como usuário, gostaria de cancelar uma compra.
+  Eu, como usuário, gostaria de adicionar e remover itens no carrinho e verificar se o valor está sendo calculado
+  corretamente.
 
   Contexto:
-    Dado que o usuário está logado na página myStore
+    Dado que o usuário está na página myStore
 
-  Cenário: Alterar dados do usuário com sucesso.
-    Quando o usuário seleciona o produto "Faded Short Sleeve T-shirts"
-    E adiciona ao carrinho em seguida segue para checkout
-      | valor            |
-      | Testing Name     |
-      | Testing LastName |
-      | Pass!@#          |
-      | 24               |
-      | 3                |
-      | 1991             |
-      | Full Address     |
-      | Green Bay        |
-      | Wisconsin        |
-      | 54229            |
-      | +1-920-555-0165  |
-    Então deve clicar no botão "delete" e em seguida clicar em voltar ao menu principal.
+  Cenário: Remover um item do carrinho e recalcular o valor total
+    Quando o usuário adiciona 3 produtos no carrinho
+    E acessa o carrinho
+    E remove o primeiro item da lista
+    Então o valor valor total é recalculado corretamente

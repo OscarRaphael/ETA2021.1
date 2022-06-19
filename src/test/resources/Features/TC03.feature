@@ -1,6 +1,6 @@
 #language:pt
 
-Funcionalidade: Adicionar item em carrinho
+Funcionalidade: Realizar a compra de um item
 
   Eu, como usuário, gostaria de acessar o sistema, adicionar um produto no carrinho e finalizar a compra
 
