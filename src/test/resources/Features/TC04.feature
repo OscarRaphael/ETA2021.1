@@ -1,25 +1,18 @@
 #language:pt
 
-Funcionalidade: Cancelar uma Compra
+Funcionalidade: Adicionar item em carrinho e remover
 
-  Eu, como usuário, gostaria de cancelar uma compra.
+  Eu, como usuário, gostaria de acessar o sistema, adicionar um produto no carrinho e depois removê-lo
 
   Contexto:
-    Dado que o usuário está logado na página myStore
+    Dado que o usuário está na página myStore
 
-  Cenário: Alterar dados do usuário com sucesso.
-    Quando o usuário seleciona o produto "Faded Short Sleeve T-shirts"
-    E adiciona ao carrinho em seguida segue para checkout
-      | valor            |
-      | Testing Name     |
-      | Testing LastName |
-      | Pass!@#          |
-      | 24               |
-      | 3                |
-      | 1991             |
-      | Full Address     |
-      | Green Bay        |
-      | Wisconsin        |
-      | 54229            |
-      | +1-920-555-0165  |
-    Então deve clicar no botão "delete" e em seguida clicar em voltar ao menu principal.
+  Cenário: Adicionar item no carrinho e remover em seguida
+    Quando o usuário busca o produto "Faded Short Sleeve T-shirts"
+    E clica no primeiro item da busca
+    E adiciona o produto no carrinho
+    E clica no link Proceed to checkout do modal
+    E remove o primeiro item da lista
+    Então é exibida a mensagem de que o carrinho está vazio
+
+
