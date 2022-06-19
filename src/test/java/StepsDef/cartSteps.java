@@ -12,9 +12,17 @@ public class cartSteps {
         CartPage.clickCheckout();
     }
 
+    @E("avança até a tela de pagamento")
+    public void e_avanca_ate_a_tela_de_pagamento(){
+        CartPage.clickCheckout();
+        CartPage.clickCheckout();
+        CartPage.checkTerms();
+        CartPage.clickCheckout();
+    }
+
     @E("aceita os termos de serviço")
     public void e_aceita_termos_servicos() {
-        CartPage.checkTerms();
+
     }
 
     @E("clica no link Pay by bank wire")
