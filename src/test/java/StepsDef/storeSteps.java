@@ -2,6 +2,7 @@ package StepsDef;
 
 import Pages.storePage;
 import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Quando;
 
 public class storeSteps {
@@ -20,5 +21,15 @@ public class storeSteps {
     @Quando("o usuário acessa o contate-nos")
     public void oUsuárioAcessaOContateNos() throws Throwable {
         StorePage.clickContactUs();
+    }
+
+    @E("o usuario navega até a página inicial")
+    public void o_usuario_navega_ate_a_pagina_inicial(){
+        StorePage.clickLogo();
+    }
+
+    @Quando("o usuário busca o produto {string}")
+    public void o_usuario_busca_o_produto(String produto){
+        StorePage.inputSearch(produto);
     }
 }
