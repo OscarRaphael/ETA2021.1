@@ -44,4 +44,14 @@ public class cartSteps {
     public void entao_mensagem_compra_sucesso_exibida() {
         CartPage.successMessageIsDisplayed();
     }
+
+    @E("remove o primeiro item da lista")
+    public void e_remove_o_item_da_lista(){
+        CartPage.removeItem(0);
+    }
+
+    @Então("é exibida a mensagem de que o carrinho está vazio")
+    public void entao_exibida_mensagem_carrinho_vazio() {
+        CartPage.emptyCartMessageIsDisplayed();
+    }
 }
