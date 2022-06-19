@@ -32,4 +32,16 @@ public class storeSteps {
     public void o_usuario_busca_o_produto(String produto){
         StorePage.inputSearch(produto);
     }
+
+    @Quando("o usuário adiciona 3 produtos no carrinho")
+    public void o_usuario_adiciona_3_produtos_no_carrinho(){
+        StorePage.addItemHomefeatured(0);
+        StorePage.addItemHomefeatured(1);
+        StorePage.addItemHomefeatured(2);
+    }
+
+    @E("acessa o carrinho")
+    public void acessa_o_carrinho(){
+        StorePage.clickCartLink();
+    }
 }

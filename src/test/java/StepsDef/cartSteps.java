@@ -54,4 +54,10 @@ public class cartSteps {
     public void entao_exibida_mensagem_carrinho_vazio() {
         CartPage.emptyCartMessageIsDisplayed();
     }
+
+    @Então("o valor valor total é recalculado corretamente")
+    public void o_valor_e_recalculado_corretamente(){
+        CartPage.evaluateTotal();
+    }
+
 }
