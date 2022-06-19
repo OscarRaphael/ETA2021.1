@@ -24,7 +24,7 @@ public class cartPage extends basePage {
     @FindBy(how = How.XPATH, using = "//button/span[text()[contains(., 'I confirm my order')]]")
     private WebElement confirm_order_link;
 
-    @FindBy(how = How.XPATH, using = "//p/strong[text()='Your order on My Store is complete.']")
+    @FindBy(how = How.XPATH, using = "//*[text()='Your order on My Store is complete.']")
     private WebElement success_message;
 
     public void clickFirstItem(){
