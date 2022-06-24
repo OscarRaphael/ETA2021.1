@@ -8,6 +8,7 @@ Funcionalidade: Realizar a compra de um item
     Dado que o usuário acessa o sistema com "marcia@test.com" e "123456"
     E o usuario navega até a página inicial
 
+  @realizarcompra @credito
   Cenário: Efetuar uma compra com cartão de crédito
     Quando o usuário busca o produto "Faded Short Sleeve T-shirts"
     E clica no primeiro item da busca
@@ -18,6 +19,7 @@ Funcionalidade: Realizar a compra de um item
     E clica no link I confirm my order
     Então a mensagem de compra realizada com sucesso é exibida
 
+  @realizarcompra @cheque
   Cenário: Efetuar uma compra com cheque
     Quando o usuário busca o produto "Faded Short Sleeve T-shirts"
     E clica no primeiro item da busca
