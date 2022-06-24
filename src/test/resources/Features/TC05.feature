@@ -8,6 +8,7 @@ Funcionalidade: Calcular valor total da compra
   Contexto:
     Dado que o usuário está na página myStore
 
+  @calcularvalor
   Cenário: Remover um item do carrinho e recalcular o valor total
     Quando o usuário adiciona 3 produtos no carrinho
     E acessa o carrinho

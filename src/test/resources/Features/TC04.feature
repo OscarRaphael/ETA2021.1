@@ -7,6 +7,7 @@ Funcionalidade: Adicionar item em carrinho e remover
   Contexto:
     Dado que o usuário está na página myStore
 
+  @adicionarremover
   Cenário: Adicionar item no carrinho e remover em seguida
     Quando o usuário busca o produto "Faded Short Sleeve T-shirts"
     E clica no primeiro item da busca
