@@ -14,7 +14,7 @@ import java.util.List;
 
 public class cartPage extends basePage {
 
-    @FindBy(how = How.XPATH, using = "//ul[contains(@class, 'product_list')]/li/div")
+    @FindBy(how = How.XPATH, using = "//*[contains(@class, 'product_list')]/li/div")
     private WebElement first_item;
 
     @FindBy(how = How.XPATH, using = "//p[@class='cart_navigation clearfix']/*/span[text()[contains(., 'Proceed to checkout')]]")

@@ -1,7 +1,5 @@
 package Pages;
 
-import Utils.Hooks;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,11 +7,7 @@ import org.openqa.selenium.support.How;
 
 import java.util.Random;
 
-import static Utils.Hooks.driver;
-
 public class authPage extends basePage {
-
-    JavascriptExecutor js = (JavascriptExecutor) driver;
     final String randomEmail = randomEmail();
 
     @FindBy(how = How.CLASS_NAME, using = "page-heading")
@@ -34,7 +28,7 @@ public class authPage extends basePage {
     @FindBy(how = How.ID, using = "SubmitCreate")
     private WebElement create_btn;
 
-    @FindBy(how = How.CLASS_NAME, using = "lost_password form-group")
+    @FindBy(how = How.XPATH, using = "//*[@title=\"Recover your forgotten password\"]")
     private WebElement forgetPasswd_link;
 
     public void inputEmail(String text) {
@@ -68,7 +62,8 @@ public class authPage extends basePage {
     }
 
     public void clickForgotPasswd() {
-        js.executeScript("arguments[0].scrollIntoView();", forgetPasswd_link);
+        forgetPasswd_link.isDisplayed();
+        forgetPasswd_link.isEnabled();
         forgetPasswd_link.click();
     }
 

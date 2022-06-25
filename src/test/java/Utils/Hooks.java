@@ -4,8 +4,6 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 
@@ -17,13 +15,13 @@ public class Hooks {
 
     @Before
     public static WebDriver getDriver() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.edgedriver().setup();
         if (driver == null) {
-            ChromeOptions options = new ChromeOptions();
+            EdgeOptions options = new EdgeOptions();
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
             //options.addArguments("--headless");
-            driver = new ChromeDriver(options);
+            driver = new EdgeDriver(options);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
             driver.manage().window().maximize();
             driver.get(baseUrl);
