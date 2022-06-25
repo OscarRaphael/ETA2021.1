@@ -3,6 +3,7 @@ package StepsDef;
 import Pages.authPage;
 import Pages.storePage;
 import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Quando;
 
 public class authSteps {
@@ -23,5 +24,10 @@ public class authSteps {
         AuthPage.assertPage();
         AuthPage.inputCreateRandomEmail();
         AuthPage.clickCreate();
+    }
+
+    @E("acessa o menu Esqueci minha senha")
+    public void acessaOMenuEsqueciMinhaSenha() {
+        AuthPage.clickForgotPasswd();
     }
 }
