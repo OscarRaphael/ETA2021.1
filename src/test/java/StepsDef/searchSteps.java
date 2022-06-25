@@ -2,6 +2,7 @@ package StepsDef;
 
 import Pages.searchPage;
 import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Entao;
 
 public class searchSteps {
     searchPage SearchPage = new searchPage();
@@ -11,5 +12,8 @@ public class searchSteps {
         SearchPage.clickFirstItem();
     }
 
-
+    @Entao("o sistema nao deve retornar produtos")
+    public void oSistemaNaoDeveRetornarProdutos() {
+        SearchPage.mensagemErro();
+    }
 }

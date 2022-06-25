@@ -9,9 +9,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/Features",
         glue = {"StepsDef"},
         plugin = {"pretty", "html:target/cucumber-reports/Cucumber.html"},
-        dryRun = false,
         tags = "",
-        snippets= CucumberOptions.SnippetType.CAMELCASE
+        snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 public class RunCucumberTest {
 }
